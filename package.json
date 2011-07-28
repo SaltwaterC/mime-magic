@@ -1,0 +1,19 @@
+{
+	"name": "mime-magic",
+	"version": "0.1.0",
+	"main": "./lib/mime-magic.js",
+	"description": "libmagic bindings for node.js. Includes a file(1) wrapper as alternative.",
+	"engines": {
+		"node": ">=0.4.x"
+	},
+	"homepage": "https://github.com/SaltwaterC/mime-magic",
+	"author": {
+		"name": "Stefan Rusu",
+		"url": "http://www.saltwaterc.eu/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/SaltwaterC/mime-magic.git"
+	},
+	"keywords": ["mime", "magic", "libmagic", "file", "wrapper"]
+}
