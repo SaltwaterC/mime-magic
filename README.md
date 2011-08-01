@@ -25,3 +25,7 @@ mime.fileWrapper('/path/to/foo.pdf', function (err, mime) {
 ```
 
 Passing relative paths is supported. The fileWrapper uses child_process.exec behind the scenes, therefore the err argument contains the information returned by the exec method itself plus the error message returned by file(1). The module was developed against file 5.03 which sends the error message via STDOUT. An unfortunate choice from the developer, but if your file utility behaves differently, then you may not get the exact error message.
+
+## Known issues
+
+Not all the unices are supported by this release. The file(1) invocation is different on OS X for example. Other possible (such as BSD ports) use cases are unknown. Till a proper wrapper and proper bindings are available, consider it usable just under the above circumstances.

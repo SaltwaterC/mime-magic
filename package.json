@@ -1,6 +1,6 @@
 {
 	"name": "mime-magic",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "./lib/mime-magic.js",
 	"description": "libmagic bindings for node.js. Includes a file(1) wrapper as alternative.",
 	"engines": {
