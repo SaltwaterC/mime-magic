@@ -1,6 +1,6 @@
 {
 	"name": "mime-magic",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"main": "./lib/mime-magic.js",
 	"description": "libmagic bindings for node.js. Includes a file(1) wrapper as alternative.",
 	"engines": {
@@ -15,5 +15,9 @@
 		"type": "git",
 		"url": "git://github.com/SaltwaterC/mime-magic.git"
 	},
-	"keywords": ["mime", "magic", "libmagic", "file", "wrapper"]
+	"keywords": ["mime", "magic", "libmagic", "file", "wrapper"],
+	"scripts": {
+		"preinstall": "make build",
+		"preuninstall": "make purge"
+	}
 }

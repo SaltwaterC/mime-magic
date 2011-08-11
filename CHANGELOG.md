@@ -1,3 +1,6 @@
+## v0.2
+ * Includes the file(1) (v5.07) source tree along with a build script which was made to work on Ubuntu / OS X. The wrapper uses this file version along with the appropriate magic database.
+
 ## v0.1.1
  * Updated the error detection code. Some file 4.x/5.x versions used to send the error message via STDOUT. The recent versions fix this behavior by sending the error message via STDERR. mime-magic error reporting is compatible with both.
 
