@@ -12,5 +12,5 @@ purge:
 	rm -rf bin/
 	rm -rf share/
 
-test: npm
+test:
 	tools/test.sh
