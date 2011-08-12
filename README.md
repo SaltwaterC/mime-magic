@@ -28,4 +28,4 @@ Passing relative paths is supported. The fileWrapper uses child_process.exec beh
 
 ## Notice
 
-The module was developed under Ubuntu 10.04. It was tested under OS X Snow Leopard. Other platforms may be supported, but the behavior is untested.
+The module was developed under Ubuntu 10.04. It was tested under OS X Snow Leopard and FreeBSD 8.2. Other platforms may be supported, but the behavior is untested.
