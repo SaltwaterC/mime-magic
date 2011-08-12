@@ -6,7 +6,15 @@ TOTAL=0
 
 cd tests
 
-for TEST in `dir -d ./*.js`
+platform=`uname`
+dir=`which dir`
+if [ "$platform" = "FreeBSD" ]
+then
+	# Try to use the GNU CoreUtils
+	dir=`which gdir`
+fi
+
+for TEST in `$dir -d ./*.js`
 do
 	if [ -f $TEST ]
 	then
