@@ -15,11 +15,11 @@ Either manually clone this repository into your node_modules directory, run `mak
 ```javascript
 var mime = require('mime-magic');
 
-mime.fileWrapper('/path/to/foo.pdf', function (err, mime) {
+mime.fileWrapper('/path/to/foo.pdf', function (err, type) {
 	if (err) {
 		console.error(err.message); // ERROR: cannot open `/path/to/foo.pdf' (No such file or directory)
 	} else {
-		console.log('Detected mime type: %s', mime); // application/pdf
+		console.log('Detected mime type: %s', type); // application/pdf
 	}
 });
 ```
