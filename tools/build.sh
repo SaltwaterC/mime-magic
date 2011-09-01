@@ -1,26 +1,28 @@
 #!/bin/sh
 
-if [ ! -d src/file-5.07 ]
+file_version="5.08"
+
+if [ ! -d src/file-$file_version ]
 then
 	cd arc
-	tar -xf file-5.07.tar.gz
+	tar -xf file-$file_version.tar.gz
 	mkdir ../src
-	mv file-5.07 ../src
+	mv file-$file_version ../src
 	cd ..
 fi
 
 if [ ! -f share/magic.mgc -o ! -f bin/file ]
 then
-	cd src/file-5.07
+	cd src/file-$file_version
 	./configure
 	make
 	cd ../../
 	mkdir -p share
-	cp src/file-5.07/magic/magic.mgc share
+	cp src/file-$file_version/magic/magic.mgc share
 	mkdir -p bin/.libs
-	./src/file-5.07/src/file -v
-	cp src/file-5.07/src/file bin/file
-	cp src/file-5.07/src/.libs/file bin/.libs
+	./src/file-$file_version/src/file -v
+	cp src/file-$file_version/src/file bin/file
+	cp src/file-$file_version/src/.libs/file bin/.libs
 fi
 
 exit 0
