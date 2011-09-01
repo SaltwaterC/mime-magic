@@ -2,15 +2,6 @@
 
 file_version="5.08"
 
-if [ ! -d src/file-$file_version ]
-then
-	cd arc
-	tar -xf file-$file_version.tar.gz
-	mkdir ../src
-	mv file-$file_version ../src
-	cd ..
-fi
-
 build_file=0
 if [ ! -f share/magic.mgc -o ! -f bin/file ]
 then
@@ -22,6 +13,15 @@ else
 		make purge
 		build_file=1
 	fi
+fi
+
+if [ ! -d src/file-$file_version ]
+then
+	cd arc
+	tar -xf file-$file_version.tar.gz
+	mkdir ../src
+	mv file-$file_version ../src
+	cd ..
 fi
 
 if [ $build_file -eq 1 ]
