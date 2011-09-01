@@ -11,7 +11,20 @@ then
 	cd ..
 fi
 
+build_file=0
 if [ ! -f share/magic.mgc -o ! -f bin/file ]
+then
+	build_file=1
+else
+	installed_file_version=`bin/file -v | grep -Eow "[0-9]\.[0-9]+"`
+	if [ "$installed_file_version" != "$file_version" ]
+	then
+		make purge
+		build_file=1
+	fi
+fi
+
+if [ $build_file -eq 1 ]
 then
 	cd src/file-$file_version
 	./configure
