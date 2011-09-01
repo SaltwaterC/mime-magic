@@ -2,7 +2,7 @@
 
 MIME type detection library for node.js. Unlike the existing [mime](https://github.com/bentomas/node-mime) module, mime-magic does not return the type by interpreting the file extension. Instead it uses the [libmagic(3)](http://linux.die.net/man/3/libmagic) library that does it properly.
 
-Currently it provides just a simple [file(1)](http://linux.die.net/man/1/file) wrapper to get the things moving, but in the long run, the purpose of this module is to provide proper node.js libmagic bindings. The file(1) source tree is provided along with this package. It is built during the installation process. The module uses the latest available file version along with the up-to-date magic database.
+Currently it provides just a simple [file(1)](http://linux.die.net/man/1/file) wrapper to get the things moving, but in the long run, the purpose of this module is to provide proper node.js libmagic bindings. The file(1) source tree is provided along with this package. It is built during the installation process. The module aims to use the latest available file version along with the up-to-date magic database.
 
 ## Installation
 
