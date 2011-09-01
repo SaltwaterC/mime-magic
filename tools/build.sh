@@ -5,9 +5,11 @@ file_version="5.08"
 build_file=0
 if [ ! -f share/magic.mgc -o ! -f bin/file ]
 then
+	echo "file(1) is not installed"
 	build_file=1
 else
 	installed_file_version=`bin/file -v | grep -Eow "[0-9]\.[0-9]+"`
+	echo "file(1) $installed_file_version is installed, expecting $file_version"
 	if [ "$installed_file_version" != "$file_version" ]
 	then
 		make purge
