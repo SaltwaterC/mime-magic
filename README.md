@@ -1,4 +1,4 @@
-## About
+## About ![still maintained](http://stillmaintained.com/SaltwaterC/mime-magic.png)
 
 MIME type detection library for node.js. Unlike the existing [mime](https://github.com/bentomas/node-mime) module, mime-magic does not return the type by interpreting the file extension. Instead it uses the [libmagic(3)](http://linux.die.net/man/3/libmagic) library that does it properly.
 

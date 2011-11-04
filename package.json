@@ -1,6 +1,6 @@
 {
 	"name": "mime-magic",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"main": "./lib/mime-magic.js",
 	"description": "Proper MIME type detection library that wraps the libmagic functionality",
 	"engines": {

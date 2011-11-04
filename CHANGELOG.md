@@ -1,3 +1,7 @@
+## v0.2.2
+ * Updates the bundled file(1) version to 5.09.
+ * Uses child_process.execFile() instead of child_process.exec(). Besides avoiding spawning a new shell, the current approach also avoids path escaping issues and command injections.
+
 ## v0.2.1
  * Updates the bundled file(1) version to 5.08. This version adds application/zip detection among others.
  * Updates the build tool to rebuild file(1) if the expected version is different than the installed version.

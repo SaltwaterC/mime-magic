@@ -1,6 +1,6 @@
 #!/bin/sh
 
-file_version="5.08"
+file_version="5.09"
 
 build_file=0
 if [ ! -f share/magic.mgc -o ! -f bin/file ]
