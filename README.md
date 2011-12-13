@@ -29,3 +29,7 @@ Passing relative paths is supported. The fileWrapper uses child_process.exec beh
 ## Notice
 
 The module was developed under Ubuntu 10.04. It was tested under OS X Snow Leopard and FreeBSD 8.2. Other platforms may be supported, but the behavior is untested.
+
+## Contributor
+
+ * [Felix Chan](https://github.com/felixchan) - [#1](https://github.com/SaltwaterC/mime-magic/pull/1): couldn't use fileWrapper more than once unless restarted server

@@ -11,6 +11,12 @@
 		"name": "Stefan Rusu",
 		"url": "http://www.saltwaterc.eu/"
 	},
+	"contributors": [
+		{
+			"name": "Felix Chan",
+			"url": "https://github.com/felixchan"
+		}
+	],
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/SaltwaterC/mime-magic.git"

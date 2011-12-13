@@ -1,3 +1,6 @@
+## v0.2.3
+ * Merges the changes from [#1](https://github.com/SaltwaterC/mime-magic/pull/1): couldn't use fileWrapper more than once unless restarted server.
+
 ## v0.2.2
  * Updates the bundled file(1) version to 5.09.
  * Uses child_process.execFile() instead of child_process.exec(). Besides avoiding spawning a new shell, the current approach also avoids path escaping issues and command injections.
