@@ -1,5 +1,5 @@
 .project
 .settings/
 src/
-bin/
-share/
+bin/file
+bin/.libs/

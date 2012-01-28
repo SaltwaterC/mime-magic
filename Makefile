@@ -9,8 +9,8 @@ build:
 
 purge:
 	rm -rf src/
-	rm -rf bin/
-	rm -rf share/
+	rm -rf bin/.libs
+	rm -f bin/file
 
 test:
 	tools/test.sh
