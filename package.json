@@ -21,7 +21,7 @@
 		"type": "git",
 		"url": "git://github.com/SaltwaterC/mime-magic.git"
 	},
-	"keywords": ["mime", "magic", "libmagic", "file", "wrapper"],
+	"keywords": ["mime", "magic", "libmagic", "file", "wrapper", "windows", "win32"],
 	"scripts": {
 		"preinstall": "node make.js build",
 		"preuninstall": "node make.js purge"
