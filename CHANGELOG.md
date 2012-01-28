@@ -1,5 +1,6 @@
 ## v0.2.4
  * Updates the bundled file(1) version to 5.10.
+ * Windows support.
 
 ## v0.2.3
  * Merges the changes from [#1](https://github.com/SaltwaterC/mime-magic/pull/1): couldn't use fileWrapper more than once unless restarted server.
