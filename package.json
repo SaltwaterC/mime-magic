@@ -23,7 +23,7 @@
 	},
 	"keywords": ["mime", "magic", "libmagic", "file", "wrapper"],
 	"scripts": {
-		"preinstall": "node make.js preinstall",
-		"preuninstall": "node make.js preuninstall"
+		"preinstall": "node make.js build",
+		"preuninstall": "node make.js purge"
 	}
 }
