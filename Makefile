@@ -1,7 +1,7 @@
 npm:
 	/usr/bin/env npm install
 
-publish: purge npm
+publish: npm
 	/usr/bin/env npm publish
 
 build:
