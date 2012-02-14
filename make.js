@@ -2,12 +2,15 @@
 
 if (process.platform !== 'win32')
 {
-	require('child_process').execFile('/usr/bin/env', ['make', process.argv[2]], function (err, stdout) {
-		if (err) {
-			console.log(err.message);
-			process.exit(1);
-		} else {
-			console.log(stdout);
-		}
+	var spawn = require('child_process').spawn;
+	var make = spawn('/usr/bin/env', ['make', process.argv[2]]);
+	make.stdout.on('data', function (data) {
+		process.stdout.write(data);
+	});
+	make.stderr.on('data', function (data) {
+		process.stderr.write(data);
+	});
+	make.on('exit', function (code) {
+		process.exit(code);
 	});
 }
