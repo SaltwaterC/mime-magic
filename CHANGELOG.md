@@ -1,3 +1,6 @@
+## v0.2.6
+ * Updates the bundled file(1) version to 5.11.
+
 ## v0.2.5
  * The make.js wrapper outputs the whole process after file(1) installation.
 
