@@ -26,6 +26,26 @@ mime.fileWrapper('/path/to/foo.pdf', function (err, type) {
 });
 ```
 
+You may use an array of paths. The callback gets an array of mimes:
+
+```javascript
+var files = [
+	'/path/to/foo.pdf',
+	'/path/to/foo.txt'
+];
+
+mime.fileWrapper(files, function (err, types) {
+	if (err) {
+		console.error(err.message);
+		// ERROR: cannot open `/path/to/foo.pdf' (No such file or directory)
+		// ERROR: cannot open `/path/to/foo.txt' (No such file or directory)
+	} else {
+		console.log(types);
+		// ['application/pdf', 'text/plain']
+	}
+});
+```
+
 Under Windows, you must escape the backslash separators of the path argument:
 
 ```javascript
@@ -48,6 +68,7 @@ Passing relative paths is supported. The fileWrapper uses child_process.execFile
 
 The module was developed under Ubuntu 10.04 and Windows 7. It was tested under OS X Snow Leopard and FreeBSD 8.2. Other platforms may be supported, but the behavior is untested.
 
-## Contributor
+## Contributors
 
  * [Felix Chan](https://github.com/felixchan) - [#1](https://github.com/SaltwaterC/mime-magic/pull/1): couldn't use fileWrapper more than once unless restarted server
+ * [eddyb](https://github.com/eddyb) - [#3](https://github.com/SaltwaterC/mime-magic/pull/3) Support for arrays of paths, with the callback getting an array of mime-types.
