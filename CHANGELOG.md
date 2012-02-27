@@ -1,5 +1,6 @@
 ## v0.2.6
  * Updates the bundled file(1) version to 5.11.
+ * Support for passing an array of paths with the callback getting an array of MIME types - [#3](https://github.com/SaltwaterC/mime-magic/pull/3).
 
 ## v0.2.5
  * The make.js wrapper outputs the whole process after file(1) installation.
