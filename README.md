@@ -19,9 +19,11 @@ var mime = require('mime-magic');
 
 mime.fileWrapper('/path/to/foo.pdf', function (err, type) {
 	if (err) {
-		console.error(err.message); // ERROR: cannot open `/path/to/foo.pdf' (No such file or directory)
+		console.error(err.message);
+		// ERROR: cannot open `/path/to/foo.pdf' (No such file or directory)
 	} else {
-		console.log('Detected mime type: %s', type); // application/pdf
+		console.log('Detected mime type: %s', type);
+		// application/pdf
 	}
 });
 ```
@@ -71,4 +73,4 @@ The module was developed under Ubuntu 10.04 and Windows 7. It was tested under O
 ## Contributors
 
  * [Felix Chan](https://github.com/felixchan) - [#1](https://github.com/SaltwaterC/mime-magic/pull/1): couldn't use fileWrapper more than once unless restarted server
- * [eddyb](https://github.com/eddyb) - [#3](https://github.com/SaltwaterC/mime-magic/pull/3) Support for arrays of paths, with the callback getting an array of mime-types.
+ * [eddyb](https://github.com/eddyb) - [#3](https://github.com/SaltwaterC/mime-magic/pull/3): support for arrays of paths, with the callback getting an array of mime-types.
