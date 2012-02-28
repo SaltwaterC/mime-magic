@@ -66,9 +66,20 @@ mime.fileWrapper('C:/path/to/foo.pdf', function (err, type) {
 
 Passing relative paths is supported. The fileWrapper uses child_process.execFile() behind the scenes, therefore the err argument contains the information returned by the execFile() method itself plus the error message returned by file(1).
 
-## Notice
+## Notices
 
 The module was developed under Ubuntu 10.04 and Windows 7. It was tested under OS X Snow Leopard and FreeBSD 8.2. Other platforms may be supported, but the behavior is untested.
+
+The Windows binaries are built by myself under Windows 7 / MinGW + MSYS. The binaries are packed with the [UPX](http://upx.sourceforge.net/) tool in order to make them smaller.
+
+Here's the virustotal.com analysis:
+
+ * [file.exe](https://www.virustotal.com/file/8e4b6b373538ff98be4df14af0f6ccbd6b1306febc0a37a2a5c7d26f6d8f30f6/analysis/1330428088/) (unpacked)
+ * [file.exe](https://www.virustotal.com/file/bf1a01443588e75be0a0b674da0d0467e4203833c4de7a9a1507bffe46a57830/analysis/1330427980/) (packed)
+ * [libmagic-1.dll](https://www.virustotal.com/file/0543b99145a57ab425fe48c7613ff85c32185554e6539df1df1ddaf8584755d8/analysis/1330428015/) (packed)
+ * [libgnurx-0.dll](https://www.virustotal.com/file/fabb4a8ace8b841e418293fbd41fcb14dd851b1c1e33acd0414669a500cc9540/analysis/1330428002/) (packed)
+
+Please notice that for the unpacked binary there are a couple of false positives, while for the packed binary, there are four of them.
 
 ## Contributors
 
