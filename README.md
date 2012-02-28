@@ -68,7 +68,7 @@ Passing relative paths is supported. The fileWrapper uses child_process.execFile
 
 ## Notices
 
-The module was developed under Ubuntu 10.04 and Windows 7. It was tested under OS X Snow Leopard and FreeBSD 8.2. Other platforms may be supported, but the behavior is untested.
+The module was developed under Ubuntu 10.04 and Windows 7. It was tested under OS X Snow Leopard and FreeBSD 9.0. Other platforms may be supported, but the behavior is untested.
 
 The Windows binaries are built by myself under Windows 7 / MinGW + MSYS. The binaries are packed with the [UPX](http://upx.sourceforge.net/) tool in order to make them smaller.
 
