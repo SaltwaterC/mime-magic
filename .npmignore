@@ -3,3 +3,4 @@
 src/
 bin/file
 bin/.libs/
+*.komodoproject
