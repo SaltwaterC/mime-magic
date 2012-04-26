@@ -3,7 +3,7 @@
 file_version="5.11"
 
 build_file=0
-if [ ! -f share/magic.mgc -o ! -f bin/file ]
+if [ ! -f bin/file -o ! -f lib/libmagic.so ]
 then
 	echo "file(1) is not installed"
 	build_file=1
@@ -32,12 +32,14 @@ then
 	./configure
 	make
 	cd ../../
-	mkdir -p share
 	cp src/file-$file_version/magic/magic.mgc share
-	mkdir -p bin/.libs
-	./src/file-$file_version/src/file -v
-	cp src/file-$file_version/src/file bin/file
-	cp src/file-$file_version/src/.libs/file bin/.libs
+	cp src/file-5.11/src/.libs/file bin/file
+	cp src/file-5.11/src/.libs/libmagic.so lib/libmagic.so
+	
+	echo "Version information:"
+	
+	# print the version info for debug purposes
+	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc -v
 fi
 
 exit 0
