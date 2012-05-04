@@ -8,7 +8,7 @@ then
 	echo "file(1) is not installed"
 	build_file=1
 else
-	installed_file_version=`bin/file -v | grep -Eo "[0-9]\.[0-9]+"`
+	installed_file_version=`LD_LIBRARY_PATH bin/file -v | grep -Eo "[0-9]\.[0-9]+"`
 	echo "file(1) $installed_file_version is installed, expecting $file_version"
 	if [ "$installed_file_version" != "$file_version" ]
 	then
