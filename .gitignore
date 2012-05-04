@@ -3,4 +3,5 @@
 src/
 bin/file
 bin/.libs/
+lib/libmagic.so
 *.komodoproject
