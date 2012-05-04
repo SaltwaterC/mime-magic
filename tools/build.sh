@@ -36,6 +36,10 @@ then
 	cp src/file-5.11/src/.libs/file bin/file
 	cp src/file-5.11/src/.libs/libmagic.so lib/libmagic.so
 	
+	cd lib
+	ln -s libmagic.so libmagic.so.1
+	cd ..
+	
 	echo "--[DEBUG]--"
 	echo "Version information:"
 	# print the version info for debug purposes

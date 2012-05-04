@@ -3,6 +3,7 @@ purge:
 	rm -rf bin/.libs
 	rm -f bin/file
 	rm -f lib/libmagic.so
+	rm -f lib/libmagic.so.1
 
 publish: purge
 	/usr/bin/env npm -f publish
