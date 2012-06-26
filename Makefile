@@ -10,5 +10,7 @@ publish: purge
 build:
 	tools/build.sh
 
+check: test
+tests: test
 test: build
 	tools/test.sh
