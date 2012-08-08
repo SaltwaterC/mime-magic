@@ -11,7 +11,9 @@ publish: purge
 build:
 	tools/build.sh
 
+simpletest:
+	tools/test.sh
+
 tests: test
 check: test
-test: build
-	tools/test.sh
+test: build simpletest
