@@ -54,17 +54,17 @@ then
 	echo "--[DEBUG]--"
 	echo "Version information:"
 	# print the version info for debug purposes
-	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc -v
+	LD_LIBRARY_PATH=lib DYLD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc -v
 	echo
 	# execute simple lookups to test the installation
 	echo "Testing the installation:"
-	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo
-	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.pdf
-	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt
-	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt.bz2
-	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt.gz
-	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt.tar
-	LD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt.zip
+	LD_LIBRARY_PATH=lib DYLD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo
+	LD_LIBRARY_PATH=lib DYLD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.pdf
+	LD_LIBRARY_PATH=lib DYLD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt
+	LD_LIBRARY_PATH=lib DYLD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt.bz2
+	LD_LIBRARY_PATH=lib DYLD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt.gz
+	LD_LIBRARY_PATH=lib DYLD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt.tar
+	LD_LIBRARY_PATH=lib DYLD_LIBRARY_PATH=lib bin/file --magic-file share/magic.mgc --mime-type --brief tests/data/foo.txt.zip
 	
 	echo "--[DEBUG]--"
 fi
