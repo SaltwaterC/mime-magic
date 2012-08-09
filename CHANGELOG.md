@@ -1,3 +1,6 @@
+## v0.3
+ * Uses different installation mode for the file(1) utility. Under restrictive environments, such as Heroku, the library may use the system installed libmagic database which is not forward compatible.
+
 ## v0.2.6
  * Updates the bundled file(1) version to 5.11.
  * Support for passing an array of paths with the callback getting an array of MIME types - [#3](https://github.com/SaltwaterC/mime-magic/pull/3).

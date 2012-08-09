@@ -1,8 +1,16 @@
+.PHONY: all
+.DEFAULT: all
+
+all: build
+
 purge:
 	rm -rf src/
 	rm -rf bin/.libs
 	rm -f bin/file
-	rm -rf lib/libmagic.so
+	rm -f lib/libmagic.so
+	rm -f lib/libmagic.so.1
+	rm -f lib/libmagic.dylib
+	rm -f lib/libmagic.1.dylib
 
 publish: purge
 	/usr/bin/env npm -f publish
@@ -10,7 +18,12 @@ publish: purge
 build:
 	tools/build.sh
 
-check: test
-tests: test
-test: build
+simpletest:
 	tools/test.sh
+
+tests: test
+check: test
+test: build simpletest
+
+debug:
+	tools/debug.sh
