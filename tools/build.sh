@@ -34,11 +34,22 @@ then
 	cd ../../
 	cp src/file-$file_version/magic/magic.mgc share
 	cp src/file-5.11/src/.libs/file bin/file
-	cp src/file-5.11/src/.libs/libmagic.so lib/libmagic.so
 	
-	cd lib
-	ln -s libmagic.so libmagic.so.1
-	cd ..
+	if [ -f src/file-5.11/src/.libs/libmagic.so ]
+	then
+		cp src/file-5.11/src/.libs/libmagic.so lib/libmagic.so
+		cd lib
+		ln -s libmagic.so libmagic.so.1
+		cd ..
+	fi
+	
+	if [ -f src/file-5.11/src/.libs/libmagic.dylib ]
+	then
+		cp src/file-5.11/src/.libs/libmagic.dylib lib/libmagic.dylib
+		cd lib
+		ln -s libmagic.dylib libmagic.1.dylib
+		cd ..
+	fi
 	
 	echo "--[DEBUG]--"
 	echo "Version information:"
