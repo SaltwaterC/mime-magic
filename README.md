@@ -79,7 +79,7 @@ Here's the virustotal.com analysis:
  * [libmagic-1.dll](https://www.virustotal.com/file/0543b99145a57ab425fe48c7613ff85c32185554e6539df1df1ddaf8584755d8/analysis/1330428015/) (packed)
  * [libgnurx-0.dll](https://www.virustotal.com/file/fabb4a8ace8b841e418293fbd41fcb14dd851b1c1e33acd0414669a500cc9540/analysis/1330428002/) (packed)
 
-Please notice that for the unpacked binary there are a couple of false positives, while for the packed binary, there are four of them.
+Please notice that some antiviruses may throw false positives.
 
 ## Contributors
 
