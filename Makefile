@@ -24,3 +24,6 @@ simpletest:
 tests: test
 check: test
 test: build simpletest
+
+debug:
+	tools/debug.sh
