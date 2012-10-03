@@ -1,3 +1,5 @@
+'use strict';
+
 var mime = require('../');
 var assert = require('assert');
 

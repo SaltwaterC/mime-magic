@@ -1,7 +1,4 @@
-var mime = require('../');
-var assert = require('assert');
-
-var callback = false;
+var test = require('./includes/test.js');
 
 var files = [
 	'data/foo.txt.bz2',
@@ -21,15 +18,4 @@ var expected = [
 	'text/plain'
 ];
 
-mime.fileWrapper(files, function (err, res) {
-	callback = true;
-	assert.ifError(err);
-	console.log(res);
-	for (var i in res) {
-		assert.deepEqual(res[i], expected[i]);
-	}
-});
-
-process.on('exit', function () {
-	assert.ok(callback);
-});
+test(files, expected);

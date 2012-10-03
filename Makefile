@@ -21,9 +21,12 @@ build:
 simpletest:
 	tools/test.sh
 
+lint:
+	tools/lint.sh
+
 tests: test
 check: test
-test: build simpletest
+test: lint build simpletest
 
 debug:
 	tools/debug.sh

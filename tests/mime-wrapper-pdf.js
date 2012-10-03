@@ -1,14 +1,3 @@
-var mime = require('../');
-var assert = require('assert');
+var test = require('./includes/test.js');
 
-var callback = false;
-
-mime.fileWrapper('data/foo.pdf', function (err, res) {
-	callback = true;
-	assert.ifError(err);
-	assert.deepEqual(res, 'application/pdf');
-});
-
-process.on('exit', function () {
-	assert.ok(callback);
-});
+test('data/foo.pdf', 'application/pdf');
