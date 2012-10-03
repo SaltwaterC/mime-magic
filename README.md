@@ -17,7 +17,7 @@ Either manually clone this repository into your node_modules directory, run `mak
 ```javascript
 var mime = require('mime-magic');
 
-mime.fileWrapper('/path/to/foo.pdf', function (err, type) {
+mime('/path/to/foo.pdf', function (err, type) {
 	if (err) {
 		console.error(err.message);
 		// ERROR: cannot open `/path/to/foo.pdf' (No such file or directory)
@@ -36,7 +36,7 @@ var files = [
 	'/path/to/foo.txt'
 ];
 
-mime.fileWrapper(files, function (err, types) {
+mime(files, function (err, types) {
 	if (err) {
 		console.error(err.message);
 		// ERROR: cannot open `/path/to/foo.pdf' (No such file or directory)
@@ -51,7 +51,7 @@ mime.fileWrapper(files, function (err, types) {
 Under Windows, you must escape the backslash separators of the path argument:
 
 ```javascript
-mime.fileWrapper('C:\\path\\to\\foo.pdf', function (err, type) {
+mime('C:\\path\\to\\foo.pdf', function (err, type) {
 	// do something
 });
 ```
@@ -59,12 +59,12 @@ mime.fileWrapper('C:\\path\\to\\foo.pdf', function (err, type) {
 You may also pass a path that uses forward slashes as separators:
 
 ```javascript
-mime.fileWrapper('C:/path/to/foo.pdf', function (err, type) {
+mime('C:/path/to/foo.pdf', function (err, type) {
 	// do something
 });
 ```
 
-Passing relative paths is supported. The fileWrapper uses child_process.execFile() behind the scenes, therefore the err argument contains the information returned by the execFile() method itself plus the error message returned by file(1).
+Passing relative paths is supported. The file wrapper uses child_process.execFile() behind the scenes, therefore the err argument contains the information returned by the execFile() method itself plus the error message returned by file(1).
 
 ## Notices
 
