@@ -1,3 +1,7 @@
+## v0.4
+ * Deprecated the usage of mime.fileWrapper(). Calling mime() directly is preferred.
+ * jslint compliant.
+
 ## v0.3
  * Uses different installation mode for the file(1) utility. Under restrictive environments, such as Heroku, the library may use the system installed libmagic database which is not forward compatible.
 

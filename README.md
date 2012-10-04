@@ -68,6 +68,8 @@ Passing relative paths is supported. The file wrapper uses child_process.execFil
 
 ## Notices
 
+The mime.fileWrapper method is deprecated. The preferred method is to call the module directly.
+
 The module is developed under Ubuntu 12.04, and Windows 7. It is tested under OS X Lion, and FreeBSD 9.0. Other platforms may be supported, but the behavior is untested.
 
 The Windows binaries are built by myself under Windows 7 / MinGW + MSYS. The binaries are packed with the [UPX](http://upx.sourceforge.net/) tool in order to make them smaller.
