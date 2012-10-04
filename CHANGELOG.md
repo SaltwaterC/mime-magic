@@ -1,5 +1,5 @@
 ## v0.4
- * Deprecated the usage of mime.fileWrapper(). Calling mime() directly is preferred.
+ * Deprecated the usage of mime.fileWrapper(). Calling mime() directly is preferred - [#7](https://github.com/SaltwaterC/mime-magic/issues/7).
  * jslint compliant.
 
 ## v0.3
