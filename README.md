@@ -81,7 +81,7 @@ Here's the virustotal.com analysis:
 
 Please notice that some antiviruses may throw false positives.
 
-Proper node.js libmagic bindings were initially planned. The plans for adding them are suspended. The library gets the job done. If you feel like contributing such support, pull requests are welcome. Beware that since v0.4.1 file(1) is built as static binary. You need to revert to building the libmagic part as dynamic library in order to implement the node.js bindings.
+node.js libmagic bindings were initially planned. The plans for adding them are suspended. The library gets the job done. If you feel like contributing such support, pull requests are welcome. Beware: since v0.4.1 libmagic(3) is statically linked into file(1). You need to revert to building the libmagic part as dynamic library in order to implement the node.js bindings.
 
 ## Contributors
 
