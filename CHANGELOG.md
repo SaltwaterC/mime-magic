@@ -1,5 +1,6 @@
 ## v0.4.1
  * Static build of libmagic into the file utility. Simplifies the building and loading of the file utility. Makes the libmagic node.js bindings impossible with this setup, but things aren't moving into that direction.
+ * Static build for the Windows binary. Removed the UPX compression due to slow binary startup times.
 
 ## v0.4
  * Deprecated the usage of mime.fileWrapper(). Calling mime() directly is preferred - [#7](https://github.com/SaltwaterC/mime-magic/issues/7).

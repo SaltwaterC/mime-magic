@@ -72,14 +72,12 @@ The mime.fileWrapper method is deprecated. The preferred method is to call the m
 
 The module is developed under Ubuntu 12.04, and Windows 7. It is tested under OS X Lion, and FreeBSD 9.0. Other platforms may be supported, but the behavior is untested.
 
-The Windows binaries are built by myself under Windows 7 / MinGW + MSYS. The binaries are packed with the [UPX](http://upx.sourceforge.net/) tool in order to make them smaller.
+The Windows binaries are built by myself under Windows 7 / MinGW + MSYS.
 
 Here's the virustotal.com analysis:
 
- * [file.exe](https://www.virustotal.com/file/8e4b6b373538ff98be4df14af0f6ccbd6b1306febc0a37a2a5c7d26f6d8f30f6/analysis/1330428088/) (unpacked)
- * [file.exe](https://www.virustotal.com/file/bf1a01443588e75be0a0b674da0d0467e4203833c4de7a9a1507bffe46a57830/analysis/1330427980/) (packed)
- * [libmagic-1.dll](https://www.virustotal.com/file/0543b99145a57ab425fe48c7613ff85c32185554e6539df1df1ddaf8584755d8/analysis/1330428015/) (packed)
- * [libgnurx-0.dll](https://www.virustotal.com/file/fabb4a8ace8b841e418293fbd41fcb14dd851b1c1e33acd0414669a500cc9540/analysis/1330428002/) (packed)
+ * [file.exe](https://www.virustotal.com/file/7141c8c0f7a8dbc7c9f2108c72565ad69cf248b88a3d274a41e7242a8cf7b1d4/analysis/1352984623/)
+ * [libgnurx-0.dll](https://www.virustotal.com/file/ff6104a6c02ccebde66fb988924412cbdf9fd8b5e5a1a0699833b3892048d688/analysis/1352984639/)
 
 Please notice that some antiviruses may throw false positives.
 
