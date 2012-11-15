@@ -3,6 +3,7 @@
 
 all: build
 
+clean: purge
 purge:
 	rm -rf src/
 	rm -rf bin/.libs

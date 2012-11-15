@@ -2,9 +2,9 @@
 
 MIME type detection library for node.js. Unlike the [mime](https://github.com/broofa/node-mime) module, mime-magic does not return the type by interpreting the file extension. Instead it uses the [libmagic(3)](http://linux.die.net/man/3/libmagic) library which provides the result by reading the "magic number" of the file itself.
 
-Currently it provides just a simple [file(1)](http://linux.die.net/man/1/file) wrapper to get the things moving, but in the long run, the purpose of this module is to provide proper node.js libmagic bindings. The file(1) source tree is provided along with this package. It is built during the installation process. The module aims to use the latest available file version along with the up-to-date magic database.
+It provides just a simple [file(1)](http://linux.die.net/man/1/file) wrapper. The file(1) source tree is provided along with this package. It is built during the installation process. The module aims to use the latest available file version along with the up-to-date magic database.
 
-The Windows version of file(1) is bundled with the package. It is a native binary build with MinGW and compressed with UPX.
+The Windows version of file(1) is bundled with the package. It is a native binary build with MinGW.
 
 ## Installation
 
@@ -82,6 +82,8 @@ Here's the virustotal.com analysis:
  * [libgnurx-0.dll](https://www.virustotal.com/file/fabb4a8ace8b841e418293fbd41fcb14dd851b1c1e33acd0414669a500cc9540/analysis/1330428002/) (packed)
 
 Please notice that some antiviruses may throw false positives.
+
+Proper node.js libmagic bindings were initially planned. The plans for adding them are suspended. The library gets the job done. If you feel like contributing such support, pull requests are welcome. Beware that since v0.4.1 file(1) is built as static binary. You need to revert to building the libmagic part as dynamic library in order to implement the node.js bindings.
 
 ## Contributors
 
