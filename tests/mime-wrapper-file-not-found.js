@@ -3,14 +3,14 @@
 var mime = require('../');
 var assert = require('assert');
 
-var callback = false;
+var callback = 0;
 
 mime('data/foobar', function (err, res) {
-	callback = true;
+	callback++;
 	assert.ok(err instanceof Error);
 	assert.equal(err.code, 1);
 });
 
 process.on('exit', function () {
-	assert.ok(callback);
+	assert.strictEqual(callback, 1);
 });

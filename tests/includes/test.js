@@ -8,15 +8,15 @@ module.exports = function (path, expectedMime) {
 	var mime = require('../../');
 	var assert = require('assert');
 	
-	var callback = false;
+	var callback = 0;
 	
 	mime(path, function (err, res) {
-		callback = true;
+		callback++;
 		assert.ifError(err);
 		assert.deepEqual(res, expectedMime);
 	});
 	
 	process.on('exit', function () {
-		assert.ok(callback);
+		assert.strictEqual(callback, 1);
 	});
 };
