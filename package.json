@@ -4,7 +4,7 @@
 	"main": "./lib/mime-magic.js",
 	"description": "Proper MIME type detection library that wraps the libmagic functionality",
 	"engines": {
-		"node": ">=0.4.x"
+		"node": ">=0.4.9"
 	},
 	"homepage": "https://github.com/SaltwaterC/mime-magic",
 	"author": {
@@ -28,6 +28,7 @@
 	"keywords": ["mime", "magic", "libmagic", "file", "wrapper", "windows", "win32"],
 	"scripts": {
 		"preinstall": "node make.js build",
-		"preuninstall": "node make.js purge"
+		"preuninstall": "node make.js purge",
+		"test": "make test"
 	}
 }
