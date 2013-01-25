@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ## CONFIG
-file_version="5.11"
+file_version="5.12"
 ## /CONFIG
 
 build_file=0
