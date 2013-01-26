@@ -1,5 +1,5 @@
 ## v0.4.2
- * Updates the bundled file(1) version to 5.12.
+ * Updates the bundled file(1) version to 5.12. Changes the Windows build system to Cygwin due to the instability of the file-5.12 builds under MinGW + MSYS.
 
 ## v0.4.1
  * Static build of libmagic into the file utility. Simplifies the building and loading of the file utility. Makes the libmagic node.js bindings impossible with this setup, but things aren't moving into that direction.
