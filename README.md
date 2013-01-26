@@ -68,16 +68,16 @@ Passing relative paths is supported. The file wrapper uses child_process.execFil
 
 ## Notices
 
-The mime.fileWrapper method is deprecated. The preferred method is to call the module directly.
+The mime.fileWrapper method is deprecated. The preferred method is to call the module directly as function.
 
-The module is developed under Ubuntu 12.04, and Windows 7. It is tested under OS X Lion, and FreeBSD 9.0. Other platforms may be supported, but the behavior is untested.
+The module is developed under Ubuntu 12.04, Windows 7, and Mac OS X 10.8. It is tested FreeBSD 9.0. Other platforms may be supported, but the behavior is untested.
 
-The Windows binaries are built by myself under Windows 7 / MinGW + MSYS.
+The Windows binaries are built by myself under Windows 7 / cygwin 1.7.
 
 Here's the virustotal.com analysis:
 
- * [file.exe](https://www.virustotal.com/file/7141c8c0f7a8dbc7c9f2108c72565ad69cf248b88a3d274a41e7242a8cf7b1d4/analysis/1352984623/)
- * [libgnurx-0.dll](https://www.virustotal.com/file/ff6104a6c02ccebde66fb988924412cbdf9fd8b5e5a1a0699833b3892048d688/analysis/1352984639/)
+ * [file.exe](https://www.virustotal.com/file/141152a364fe3fdb981f42b959b8bb306af21e8532d3931c76f2b9b4601c2254/analysis/1359210729/)
+ * [cygwin1.dll](https://www.virustotal.com/file/df4e2115c80d07ca4345ba92053dcc38c4002554677a04509d02669a50ab86bf/analysis/1359210741/)
 
 Please notice that some antiviruses may throw false positives.
 
