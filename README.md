@@ -4,7 +4,7 @@ MIME type detection library for node.js. Unlike the [mime](https://github.com/br
 
 It provides just a simple [file(1)](http://linux.die.net/man/1/file) wrapper. The file(1) source tree is provided along with this package. It is built during the installation process. The module aims to use the latest available file version along with the up-to-date magic database.
 
-The Windows version of file(1) is bundled with the package. It is a native binary build with MinGW.
+The Windows version of file(1) is bundled with the package. It is a native binary built under cygwin 1.7.
 
 ## Installation
 
@@ -70,9 +70,9 @@ Passing relative paths is supported. The file wrapper uses child_process.execFil
 
 The mime.fileWrapper method is deprecated. The preferred method is to call the module directly as function.
 
-The module is developed under Ubuntu 12.04, Windows 7, and Mac OS X 10.8. It is tested FreeBSD 9.0. Other platforms may be supported, but the behavior is untested.
+The module is developed under Ubuntu 12.04, Windows 7, and Mac OS X 10.8. It is tested FreeBSD 9.1. Other platforms may be supported, but the behavior is untested.
 
-The Windows binaries are built by myself under Windows 7 / cygwin 1.7.
+The Windows binaries are built by me under Windows 7 / cygwin 1.7.
 
 Here's the virustotal.com analysis:
 
