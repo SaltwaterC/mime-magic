@@ -1,3 +1,6 @@
+##
+ * Updates the bundled file(1) version to 5.13.
+
 ## v0.4.2
  * Updates the bundled file(1) version to 5.12. Changes the Windows build system to Cygwin due to the instability of the file-5.12 builds under MinGW + MSYS.
 
