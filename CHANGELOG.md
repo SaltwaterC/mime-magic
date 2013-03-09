@@ -1,4 +1,4 @@
-##
+## v0.4.3
  * Updates the bundled file(1) version to 5.13.
 
 ## v0.4.2
