@@ -76,7 +76,7 @@ The Windows binaries are built by me under Windows 7 / cygwin 1.7.
 
 Here's the virustotal.com analysis:
 
- * [file.exe](https://www.virustotal.com/file/141152a364fe3fdb981f42b959b8bb306af21e8532d3931c76f2b9b4601c2254/analysis/1359210729/)
+ * [file.exe](https://www.virustotal.com/en/file/2a44dadb748a93ac87ad10f643426192d7beb993c4046fe546b1fb11981e7f0b/analysis/1363079646/)
  * [cygwin1.dll](https://www.virustotal.com/file/df4e2115c80d07ca4345ba92053dcc38c4002554677a04509d02669a50ab86bf/analysis/1359210741/)
 
 Please notice that some antiviruses may throw false positives.
