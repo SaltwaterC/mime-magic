@@ -14,4 +14,4 @@ function lint
 }
 
 lint lib
-lint test
+lint tests

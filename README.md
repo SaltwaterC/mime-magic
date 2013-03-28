@@ -1,8 +1,8 @@
-## About [![build status](https://secure.travis-ci.org/SaltwaterC/mime-magic.png?branch=master)](http://travis-ci.org/SaltwaterC/mime-magic) ![stillmaintained](http://stillmaintained.com/SaltwaterC/mime-magic.png)
+## About [![build status](https://secure.travis-ci.org/SaltwaterC/mime-magic.png?branch=master)](http://travis-ci.org/SaltwaterC/mime-magic)
 
 MIME type detection library for node.js. Unlike the [mime](https://github.com/broofa/node-mime) module, mime-magic does not return the type by interpreting the file extension. Instead it uses the [libmagic(3)](http://linux.die.net/man/3/libmagic) library which provides the result by reading the "magic number" of the file itself.
 
-It provides just a simple [file(1)](http://linux.die.net/man/1/file) wrapper. The file(1) source tree is provided along with this package. It is built during the installation process which means that you need a working gcc toolchain and GNU or BSD make. The module aims to use the latest available file version along with the up-to-date magic database.
+It provides just a simple [file(1)](http://linux.die.net/man/1/file) wrapper. The file(1) source tree is provided along with this package. It is built during the installation process. The module aims to use the latest available file version along with the up-to-date magic database.
 
 The Windows version of file(1) is bundled with the package. It is a native binary built under cygwin 1.7. The new versioning scheme of mime-magic follows the version number of the upstream file(1) development. mime-magic x.y.z means bundled with file(1) version x.y, patch level z.
 
@@ -11,6 +11,51 @@ The Windows version of file(1) is bundled with the package. It is a native binar
 Either manually clone this repository into your node_modules directory, run `make build` (under unices), or the recommended method:
 
 > npm install mime-magic
+
+You need a working gcc toolchain and GNU or BSD make in order to use the bundled file(1) version.
+
+If the installation of the bundled file(1) fails and you do not wish to install the gcc toolchain and a make utility, mime-magic provides [config](https://github.com/lorenwest/node-config) support, but this is *unsupported* functionality aka if things break, you're on your own. For more details, refer to the [config online documentation](http://lorenwest.github.com/node-config/latest/).
+
+The configuration file contents:
+
+```javascript
+/* default.json */
+
+{
+	"mime-magic": {
+		path: "path/to/file", // the path to file(1)
+		magic: "path/to/magic.mgc" // the path to magic.mgc
+		absolute: true // absolute paths, otherwise they are handled as relative to __dirname of mime-magic.js (mime-magic/lib)
+	}
+}
+```
+
+Example for an OS X 10.8 file 5.13 installed with [Homebrew](http://mxcl.github.com/homebrew/):
+
+```javascript
+{
+	"mime-magic": {
+		"file": "/usr/local/Cellar/file-formula/5.13/bin/file",
+		"magic": "/usr/local/Cellar/file-formula/5.13/share/misc/magic.mgc",
+		"absolute": true
+	}
+}
+```
+
+Please *do not open issues* if you use the config support instead of the bundled file(1), unless there's a provable issue with the config implementation itself. There are strong reasons behind the decision for providing the bundle: consistency and reliability. As example, file 5.04 which ships with OS X 10.8, is utterly broken:
+
+```bash
+file foo
+foo: cannot open `foo' (No such file or directory)
+echo $?
+0
+file foo 2>/dev/null
+foo: cannot open `foo' (No such file or directory)
+echo $?
+0
+```
+
+In plain English: the command exists with succes and it sends its output to STDOUT instead of STDERR even though it fails to read a proper MIME type as the file does not exist. Detecting a failure is impossible without braindead measures.
 
 ## Usage mode
 

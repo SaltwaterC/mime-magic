@@ -6,6 +6,9 @@
 	"engines": {
 		"node": ">=0.4.9"
 	},
+	"dependencies": {
+		"config": ">= 0.4.21"
+	},
 	"devDependencies": {
 		"js-beautify": ">= 0.4.2",
 		"jslint": ">= 0.1.9"
