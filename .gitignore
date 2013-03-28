@@ -1,5 +1,6 @@
 .project
 .settings/
+node_modules/
 src/
 bin/file
 bin/.libs/
