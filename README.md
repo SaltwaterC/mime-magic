@@ -23,9 +23,9 @@ The configuration file contents:
 
 {
 	"mime-magic": {
-		path: "path/to/file", // the path to file(1)
-		magic: "path/to/magic.mgc" // the path to magic.mgc
-		absolute: true // absolute paths, otherwise they are handled as relative to __dirname of mime-magic.js (mime-magic/lib)
+		"file": "path/to/file", // the path to file(1)
+		"magic": "path/to/magic.mgc" // the path to the coresponding magic.mgc
+		"absolute": true // absolute paths, otherwise they are handled as relative to __dirname of mime-magic.js (mime-magic/lib)
 	}
 }
 ```

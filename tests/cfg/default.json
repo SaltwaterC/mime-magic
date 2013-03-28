@@ -1,6 +1,6 @@
 {
 	"mime-magic": {
-		"path": "/../bin/file",
+		"file": "/../bin/file",
 		"magic": "/../share/magic.mgc",
 		"absolute": false
 	}
