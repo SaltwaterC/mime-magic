@@ -4,7 +4,7 @@ MIME type detection library for node.js. Unlike the [mime](https://github.com/br
 
 It provides just a simple [file(1)](http://linux.die.net/man/1/file) wrapper. The file(1) source tree is provided along with this package. It is built during the installation process. The module aims to use the latest available file version along with the up-to-date magic database.
 
-The Windows version of file(1) is bundled with the package. It is a native binary built under cygwin 1.7.
+The Windows version of file(1) is bundled with the package. It is a native binary built under cygwin 1.7. The new versioning scheme of mime-magic follows the version number of the upstream file(1) development. mime-magic x.y.z means bundled with file(1) version x.y, patch level z.
 
 ## Installation
 
