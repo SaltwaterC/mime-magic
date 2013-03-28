@@ -7,16 +7,16 @@ var assert = require('assert');
 // path/to/file => mime/type
 // ['path/to/file1', 'path/to/file2'] => ['mime/type1', 'mime/type2']
 
-module.exports = function (path, expectedMime) {
+module.exports = function(path, expectedMime) {
 	var callback = 0;
-	
-	mime(path, function (err, res) {
+
+	mime(path, function(err, res) {
 		callback++;
 		assert.ifError(err);
 		assert.deepEqual(res, expectedMime);
 	});
-	
-	process.on('exit', function () {
+
+	process.on('exit', function() {
 		assert.strictEqual(callback, 1);
 	});
 };

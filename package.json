@@ -6,17 +6,19 @@
 	"engines": {
 		"node": ">=0.4.9"
 	},
+	"devDependencies": {
+		"js-beautify": ">= 0.4.2",
+		"jslint": ">= 0.1.9"
+	},
 	"homepage": "https://github.com/SaltwaterC/mime-magic",
 	"author": {
 		"name": "Stefan Rusu",
 		"url": "http://www.saltwaterc.eu/"
 	},
-	"contributors": [
-		{
+	"contributors": [{
 			"name": "Felix Chan",
 			"url": "https://github.com/felixchan"
-		},
-		{
+		}, {
 			"name": "eddyb",
 			"url": "https://github.com/eddyb"
 		}

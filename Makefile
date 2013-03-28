@@ -17,17 +17,20 @@ publish: purge
 	/usr/bin/env npm -f publish
 
 build:
-	tools/build.sh
+	@tools/build.sh
 
 simpletest:
-	tools/test.sh
+	@tools/test.sh
 
 lint:
-	tools/lint.sh
+	@tools/lint.sh
 
 tests: test
 check: test
 test: lint build simpletest
 
 debug:
-	tools/debug.sh
+	@tools/debug.sh
+
+beautify:
+	@tools/beautify.sh
