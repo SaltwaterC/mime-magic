@@ -1,6 +1,7 @@
 ## v5.14.0
  * Version numbering scheme changed.
  * Updates the bundled file(1) version to 5.14.
+ * Added support for [config](https://github.com/lorenwest/node-config) in order to be able to specify your own paths to file(1) and magic.mgc [#9](https://github.com/SaltwaterC/mime-magic/issues/9).
 
 ## v0.4.3
  * Updates the bundled file(1) version to 5.13.

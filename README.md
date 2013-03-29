@@ -111,6 +111,11 @@ mime('C:/path/to/foo.pdf', function (err, type) {
 
 Passing relative paths is supported. The file wrapper uses child_process.execFile() behind the scenes, therefore the err argument contains the information returned by the execFile() method itself plus the error message returned by file(1).
 
+You can take a peek at the paths resolved internally by the library.
+
+mime.fileExec  => the absolute path to the file(1) binary
+mime.magicFile => the absolute path to the magic.mgc database
+
 ## Notices
 
 The mime.fileWrapper method is deprecated. The preferred method is to call the module directly as function.
