@@ -1,6 +1,6 @@
 ## About [![build status](https://secure.travis-ci.org/SaltwaterC/mime-magic.png?branch=master)](http://travis-ci.org/SaltwaterC/mime-magic)
 
-*Warning:* this library isn't maintaned anymore. I plan to integrate [mmmagic](https://github.com/mscdex/mmmagic) from now on. mmmagic does what this library wanted to do in the first place, but I lacked time and knowlegde about how to do it.
+**Warning:** this library isn't maintaned anymore. I plan to integrate [mmmagic](https://github.com/mscdex/mmmagic) from now on. mmmagic does what this library wanted to do in the first place, but I lacked time and knowlegde about how to do it.
 
 MIME type detection library for node.js. Unlike the [mime](https://github.com/broofa/node-mime) module, mime-magic does not return the type by interpreting the file extension. Instead it uses the [libmagic(3)](http://linux.die.net/man/3/libmagic) library which provides the result by reading the "magic number" of the file itself.
 
