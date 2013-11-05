@@ -1,4 +1,4 @@
-## About [![build status](https://secure.travis-ci.org/SaltwaterC/mime-magic.png?branch=master)](http://travis-ci.org/SaltwaterC/mime-magic)
+## [UNMAINTAINED] About [![build status](https://secure.travis-ci.org/SaltwaterC/mime-magic.png?branch=master)](http://travis-ci.org/SaltwaterC/mime-magic)
 
 **Warning:** this library isn't maintaned anymore. I plan to integrate [mmmagic](https://github.com/mscdex/mmmagic) from now on. mmmagic does what this library wanted to do in the first place, but I lacked time and knowlegde about how to do it.
 
